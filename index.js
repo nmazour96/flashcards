@@ -6,17 +6,21 @@ document.getElementById('title');
 'title'.style.textAlign = 'center';
 'title'.style.color = '#00F';
 
-document.getElementById('basicQuestionsTitle');
-'basicQuestionsTitle'.style.textAlign = 'center';
-'basicQuestionsTitle'.style.fontSize = '35px';
-'basicQuestionsTitle'.style.color = '#F00';
+document.getElementById('questionSectionTitle');
+'questionSectionTitle'.style.textAlign = 'center';
+'questionSectionTitle'.style.fontSize = '50px';
+'questionSectionTitle'.style.color = '#F00';
+
+document.getElementById('question');
+'question'.style.fontSize = '35px';
+'question'.style.color = '#0F0';
 
 function correct() {
   document.getElementById('responseOne').innerHTML = 'Correct';
 }
 
 function incorrect() {
-  document.getElementById('responseOne').innerHTML = 'Incorrect';
+  document.getElementById('responseOne').innerHTML = 'Try Again';
 }
 
 document.getElementById('four').addEventListener('click',correct);

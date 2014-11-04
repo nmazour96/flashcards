@@ -24,10 +24,6 @@ function incorrect() {
 }
 
 document.getElementById('four').addEventListener('click',correct);
-four.style.fontSize = '25px';
 document.getElementById('five').addEventListener('click',incorrect);
-five.style.fontSize = '25px';
 document.getElementById('seven').addEventListener('click',incorrect);
-seven.style.fontSize = '25px';
 document.getElementById('three').addEventListener('click',incorrect);
-three.style.fontSize = '25px';

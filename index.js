@@ -10,7 +10,6 @@ var basicQuestionSection = document.getElementById('basicQuestionSection');
 basicQuestionSection.style.textAlign = 'center';
 basicQuestionSection.style.fontSize = '50px';
 basicQuestionSection.style.color = '#F00';
-basicQuestionSection.addEventListener('click, function basic_question');
 
 var currentBasic = 0
 

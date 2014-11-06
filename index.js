@@ -11,14 +11,6 @@ questionSectionTitle.style.textAlign = 'center';
 questionSectionTitle.style.fontSize = '50px';
 questionSectionTitle.style.color = '#F00';
 
-function correct() {
-  document.getElementById('response').innerHTML = 'Correct';
-}
-
-function incorrect() {
-  document.getElementById('response').innerHTML = 'Try Again';
-}
-
 document.getElementById('basicQuestionOne').innerHTML = 'basicQuestions'[0].question;
 
 function basicQuestion() {

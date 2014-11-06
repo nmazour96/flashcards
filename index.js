@@ -13,9 +13,6 @@ basicQuestionSection.style.color = '#F00';
 
 var currentBasic = 0
 
-var currentAnswer = document.getElementById('basicQuestionAnswer');
-currentAnswer = basicQuestions[0].answer[0];
-
 document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
 
 function basic_question() {
@@ -29,4 +26,4 @@ document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].
 document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
 document.getElementById('basicQuestionAnswer').outerHTML = basicQuestions[currentBasic].answer[0];
 
-currentAnswer.addEventListener('click', basic_question);
+document.getElementById('basicQuestionAnswer').addEventListener('click', basic_question);

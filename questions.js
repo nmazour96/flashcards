@@ -1,28 +1,28 @@
 var basicQuestions = [
     {
 	question: '2 + 2 = ?',
-	options: ['seven', 'four', 'five', 'three'],
-	answer: ['four'],
+	options: ['7', '4', '5', '3'],
+	answer: ['4'],
     },
     {
 	question: '12 - 5 = ?',
-	options: ['eight', 'seventeen', 'seven', 'ten'],
-	answer: ['seven'],
+	options: ['8', '17', '7', '10'],
+	answer: ['7'],
     },
     {
 	question: '10 + 10 = ?',
-	options: ['thirtyfive', 'zero', 'ten', 'twenty'],
-	answer: ['twenty'],
+	options: ['35', '0', '10', '20'],
+	answer: ['20'],
     },
     {
 	question: '15 - 7 = ?',
-	options: ['eight', 'twentytwo', 'six', 'eightteen'],
-	answer: ['eight'],
+	options: ['8', '22', '6', '18'],
+	answer: ['8'],
     },
     {
 	question: '8 + 19 = ?',
-	options: ['twenty', 'eleven', 'twentyseven', 'twentytwo'],
-	answer: ['twentyseven'],
+	options: ['20', '11', '27', '22'],
+	answer: ['27'],
     },
 ];
 

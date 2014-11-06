@@ -27,9 +27,9 @@ document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
 
 document.getElementById('optionTwo').addEventListener('click', basic_question);
 
-document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
-document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];
-document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
-document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
+document.getElementById('optionOne').innerHTML = basicQuestions[1].options[0];
+document.getElementById('optionTwo').innerHTML = basicQuestions[1].options[1];
+document.getElementById('optionThree').innerHTML = basicQuestions[1].options[2];
+document.getElementById('optionFour').innerHTML = basicQuestions[1].options[3];
 
-document.getElementById('optionTwo').addEventListener('click', basic_question);
+document.getElementById('optionThree').addEventListener('click', basic_question);

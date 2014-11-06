@@ -21,7 +21,6 @@ document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
 function basic_question() {
   document.getElementById('basicQuestion').innerHTML = basicQuestions[currentBasic].question;
   currentBasic = currentBasic + 1;
-  currentAnswer = basicQuestions[currentBasic].answer[currentBasic];
 }
 
 document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];
@@ -29,4 +28,4 @@ document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].op
 document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].options[2];
 document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
 
-document.getElementById('basicQuestionAnswer').addEventListener('click', basic_question);
+currentAnswer.addEventListener('click', basic_question);

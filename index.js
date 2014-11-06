@@ -6,17 +6,19 @@ title.style.fontSize = '75px';
 title.style.textAlign = 'center';
 title.style.color = '#00F';
 
-var questionSectionTitle = document.getElementById('questionSectionTitle');
-questionSectionTitle.style.textAlign = 'center';
-questionSectionTitle.style.fontSize = '50px';
-questionSectionTitle.style.color = '#F00';
+var basicQuestionSection = document.getElementById('basicQuestionSection');
+basicQuestionSection.style.textAlign = 'center';
+basicQuestionSection.style.fontSize = '50px';
+basicQuestionSection.style.color = '#F00';
+basicQuestionSection.addEventListener('click, function basic_question');
+
+var currentBasic = 0
 
 document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
 
 function basic_question() {
-  for (var current = 0; current < 5; document.getElementById('basicQuestion').innerHTML = basicQuestions[current].question) {
-    current = current + 1;
-  }
+  document.getElementById('basicQuestion').innerHTML = basicQuestions[currentBasic].question;
+  currentBasic = currentBasic + 1;
 }
 
 document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
@@ -24,4 +26,11 @@ document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];
 document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
 document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
 
-document.getElementById(basicQuestions[0].answer).addEventListener('click', basic_question);
+document.getElementById('optionTwo').addEventListener('click', basic_question);
+
+document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
+document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];
+document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
+document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
+
+document.getElementById('optionTwo').addEventListener('click', basic_question);

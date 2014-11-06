@@ -13,7 +13,7 @@ questionSectionTitle.style.color = '#F00';
 
 document.getElementById('basicQuestionOne').innerHTML = basicQuestions[0].question;
 
-function basicQuestion() {
+function basic_question() {
   for (var current = 0; current < 5; document.getElementById('questionOne').innerHTML = basicQuestions[current].question) {
     current = current + 1;
   }

@@ -27,5 +27,6 @@ document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].op
 document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].options[1];
 document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].options[2];
 document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
+document.getElementById('basicQuestionAnswer').outerHTML = basicQuestions[currentBasic].answer[0];
 
 currentAnswer.addEventListener('click', basic_question);

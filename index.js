@@ -15,9 +15,6 @@ var question = document.getElementById('question');
 question.style.fontSize = '35px';
 question.style.color = '#0F0';
 
-var response = document.getElementById('response');
-response.style.fontSize = '35px';
-
 function correct() {
   document.getElementById('response').innerHTML = 'Correct';
 }
@@ -26,7 +23,15 @@ function incorrect() {
   document.getElementById('response').innerHTML = 'Try Again';
 }
 
-document.getElementById('four').addEventListener('click',correct);
-document.getElementById('five').addEventListener('click',incorrect);
-document.getElementById('seven').addEventListener('click',incorrect);
-document.getElementById('three').addEventListener('click',incorrect);
+document.getElementById('basicQuestionOne').innerHTML = 'basicQuestions'[0].question;
+
+function basicQuestion() {
+  for (var current = 0; current < 5; document.getElementById('questionOne').innerHTML = 'basicQuestions'[current].question) {
+    current = current + 1;
+  }
+}
+
+document.getElementById('seven').innerHTML = 'basicQuestions'[0].options[0];
+document.getElementById('four').innerHTML = 'basicQuestions'[0].options[1];
+document.getElementById('five').innerHTML = 'basicQuestions'[0].options[2];
+document.getElementById('three').innerHTML = 'basicQuestions'[0].options[3];

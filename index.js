@@ -11,15 +11,15 @@ questionSectionTitle.style.textAlign = 'center';
 questionSectionTitle.style.fontSize = '50px';
 questionSectionTitle.style.color = '#F00';
 
-document.getElementById('basicQuestionOne').innerHTML = 'basicQuestions'[0].question;
+document.getElementById('basicQuestionOne').innerHTML = basicQuestions[0].question;
 
 function basicQuestion() {
-  for (var current = 0; current < 5; document.getElementById('questionOne').innerHTML = 'basicQuestions'[current].question) {
+  for (var current = 0; current < 5; document.getElementById('questionOne').innerHTML = basicQuestions[current].question) {
     current = current + 1;
   }
 }
 
-document.getElementById('seven').innerHTML = 'basicQuestions'[0].options[0];
-document.getElementById('four').innerHTML = 'basicQuestions'[0].options[1];
-document.getElementById('five').innerHTML = 'basicQuestions'[0].options[2];
-document.getElementById('three').innerHTML = 'basicQuestions'[0].options[3];
+document.getElementById('seven').innerHTML = basicQuestions[0].options[0];
+document.getElementById('four').innerHTML = basicQuestions[0].options[1];
+document.getElementById('five').innerHTML = basicQuestions[0].options[2];
+document.getElementById('three').innerHTML = basicQuestions[0].options[3];

@@ -19,9 +19,9 @@ function basic_question() {
   }
 }
 
-document.getElementById('seven').innerHTML = basicQuestions[0].options[0];
-document.getElementById('four').innerHTML = basicQuestions[0].options[1];
-document.getElementById('five').innerHTML = basicQuestions[0].options[2];
-document.getElementById('three').innerHTML = basicQuestions[0].options[3];
+document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
+document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];
+document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
+document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
 
-document.getElementById('four').addEventListener('click', basic_question);
+document.getElementById('basicQuestions[0].answer').addEventListener('click', basic_question);

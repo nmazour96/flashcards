@@ -6,16 +6,16 @@ title.style.fontSize = '75px';
 title.style.textAlign = 'center';
 title.style.color = '#00F';
 
-var questionSectionTitle = document.getElementById(questionSectionTitle);
+var questionSectionTitle = document.getElementById('questionSectionTitle');
 questionSectionTitle.style.textAlign = 'center';
 questionSectionTitle.style.fontSize = '50px';
 questionSectionTitle.style.color = '#F00';
 
-var question = document.getElementById(question);
+var question = document.getElementById('question');
 question.style.fontSize = '35px';
 question.style.color = '#0F0';
 
-var response = document.getElementById(response);
+var response = document.getElementById('response');
 response.style.fontSize = '35px';
 
 function correct() {

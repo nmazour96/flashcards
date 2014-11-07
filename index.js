@@ -20,9 +20,17 @@ function basic_question() {
   currentBasic = currentBasic + 1;
 }
 
+function basic_question_options() {
+	document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];
+	document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].options[1];
+	document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].options[2];
+	document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
+	currentBasic = currentBasic + 1;
+}
+
 document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];
 document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].options[1];
 document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].options[2];
 document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
 
-document.getElementById('optionTwo').addEventListener('click', basic_question);
+document.getElementById('optionTwo').addEventListener('click', basic_question, basic_question_options);

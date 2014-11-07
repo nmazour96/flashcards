@@ -13,7 +13,7 @@ basicQuestionSection.style.color = '#F00';
 
 document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
 
-var currentBasic = 1;
+var currentBasic = 0;
 
 function basic_question_answers() {
 	document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];

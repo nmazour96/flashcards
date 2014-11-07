@@ -11,26 +11,27 @@ basicQuestionSection.style.textAlign = 'center';
 basicQuestionSection.style.fontSize = '50px';
 basicQuestionSection.style.color = '#F00';
 
-var currentBasic = 0;
-
 document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
 
+var currentBasic = 1;
+
+function basic_question_answers() {
+	document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];
+	document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].options[1];
+	document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].options[2];
+	document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
+}
+
 function basic_question() {
-  document.getElementById('basicQuestion').innerHTML = basicQuestions[currentBasic].question;
-  currentBasic = currentBasic + 1;
+  	document.getElementById('basicQuestion').innerHTML = basicQuestions[currentBasic].question;
+  	currentBasic = currentBasic + 1;
+  	basic_question_answers();
 }
 
-function basic_question_options() {
-	document.getElementById('optionOne').innerHTML = basicQuestions[1].options[0];
-	document.getElementById('optionTwo').innerHTML = basicQuestions[1].options[1];
-	document.getElementById('optionThree').innerHTML = basicQuestions[1].options[2];
-	document.getElementById('optionFour').innerHTML = basicQuestions[1].options[3];
-	currentBasic = currentBasic + 1;
-}
+document.getElementById('optionOneOne').innerHTML = basicQuestions[0].options[0];
+document.getElementById('optionTwoOne').innerHTML = basicQuestions[0].options[1];
+document.getElementById('optionThreeOne').innerHTML = basicQuestions[0].options[2];
+document.getElementById('optionFourOne').innerHTML = basicQuestions[0].options[3];
 
-document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];
-document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].options[1];
-document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].options[2];
-document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
+document.getElementById('optionTwoOne').addEventListener('click', basic_question);
 
-document.getElementById('optionTwo').addEventListener('click', basic_question, basic_question_options);

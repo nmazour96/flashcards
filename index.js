@@ -11,9 +11,7 @@ basicQuestionSection.style.textAlign = 'center';
 basicQuestionSection.style.fontSize = '50px';
 basicQuestionSection.style.color = '#F00';
 
-document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
-
-var currentBasic = 0;
+var currentBasic = 1;
 
 function basic_question_answers() {
 	document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];
@@ -24,14 +22,25 @@ function basic_question_answers() {
 
 function basic_question() {
   	document.getElementById('basicQuestion').innerHTML = basicQuestions[currentBasic].question;
-  	currentBasic = currentBasic + 1;
   	basic_question_answers();
+    currentBasic = currentBasic + 1;
 }
+
+document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
 
 document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
 document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];
 document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
 document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
 
-document.getElementById('optionTwo').addEventListener('click', basic_question);
-
+if (currentBasic === 0) {
+  document.getElementById('optionTwo').addEventListener('click', basic_question);
+} else if (currentBasic === 1) {
+  document.getElementById('optionThree').addEventListener('click', basic_question);
+} else if (currentBasic === 2) {
+  document.getElementById('optionFour').addEventListener('click', basic_question);
+} else if (currentBasic === 3) {
+  document.getElementById('optionOne').addEventListener('click', basic_question);
+} else if (currentBasic === 4) {
+  document.getElementById('optionThree').addEventListener('click', basic_question);
+}

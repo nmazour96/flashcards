@@ -28,10 +28,10 @@ function basic_question() {
   	basic_question_answers();
 }
 
-document.getElementById('optionOneOne').innerHTML = basicQuestions[0].options[0];
-document.getElementById('optionTwoOne').innerHTML = basicQuestions[0].options[1];
-document.getElementById('optionThreeOne').innerHTML = basicQuestions[0].options[2];
-document.getElementById('optionFourOne').innerHTML = basicQuestions[0].options[3];
+document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
+document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];
+document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
+document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
 
 document.getElementById('optionTwoOne').addEventListener('click', basic_question);
 

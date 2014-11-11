@@ -104,5 +104,6 @@ function advanced_question() {
 }
 
 function home() {
-	
+	options.style.display = 'none';
+	question.style.display = 'none';
 }

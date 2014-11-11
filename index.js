@@ -32,9 +32,7 @@ advancedQuestionSection.style.color = '#00F';
 advancedQuestionSection.addEventListener('click', advanced_question);
 
 var answer = document.getElementById('answer');
-answer.style.color = '#F00';
 answer.style.display = 'none';
-answer.style.fontSize = '35px'
 
 var currentBasic = 0;
 
@@ -74,7 +72,6 @@ function intermediate_question() {
 	optionFour.innerHTML = intermediateQuestions[currentIntermediate].options[3];
 	if (currentIntermediate === 0) {
 	  optionThree.addEventListener('click', intermediate_question);
-	  answer.style.display = 'block';
 	} else if (currentIntermediate === 1) {
 	  optionOne.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 2) {
@@ -100,7 +97,7 @@ function advanced_question() {
 	optionThree.innerHTML = advancedQuestions[currentAdvanced].options[2];
 	optionFour.innerHTML = advancedQuestions[currentAdvanced].options[3];
 	if (currentAdvanced === 0) {
-	  optionTwo.addEventListener('click', advanced_question);
+	  optionTwo.addEventListener('click', advanced_question, correct);
 	} else if (currentAdvanced === 1) {
 	  optionFour.addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 2) {

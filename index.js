@@ -35,6 +35,7 @@ var currentBasic = 0;
 
 function basic_question() {
 	options.style.display = 'block';
+	question.style.display = 'block';
   	question.innerHTML = basicQuestions[currentBasic].question;
   	optionOne.innerHTML = basicQuestions[currentBasic].options[0];
 	optionTwo.innerHTML = basicQuestions[currentBasic].options[1];
@@ -58,6 +59,7 @@ var currentIntermediate = 0;
 
 function intermediate_question() {
 	options.style.display = 'block';
+	question.style.display = 'block';
   	question.innerHTML = intermediateQuestions[currentIntermediate].question;
   	optionOne.innerHTML = intermediateQuestions[currentIntermediate].options[0];
 	optionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
@@ -81,6 +83,7 @@ var currentAdvanced = 0;
 
 function advanced_question() {
 	options.style.display = 'block';
+	question.style.display = 'block';
   	question.innerHTML = advancedQuestions[currentAdvanced].question;
   	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
 	optionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];

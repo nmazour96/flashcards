@@ -55,7 +55,6 @@ function basic_question() {
 	  optionThree.addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
-    answer.style.display = 'block';
 }
 
 var currentIntermediate = 0;
@@ -79,7 +78,6 @@ function intermediate_question() {
 	  optionFour.addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
-    answer.style.display = 'block';
 }
 
 var currentAdvanced = 0;
@@ -103,13 +101,12 @@ function advanced_question() {
 	  optionFour.addEventListener('click', home);
 	}
    currentAdvanced = currentAdvanced + 1;
-   answer.style.display = 'block';
 }
 
 function home() {
 	options.style.display = 'none';
 	question.style.display = 'none';
-	answer.style.display = 'none';
+	answer.style.display = 'block';
 	sectionTitles.style.display = 'block';
 	currentBasic = 0;
 	currentIntermediate = 0;

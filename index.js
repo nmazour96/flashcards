@@ -24,7 +24,7 @@ basicQuestionSection.style.color = '#F00';
 basicQuestionSection.addEventListener('click', basic_question);
 
 var intermediateQuestionSection = document.getElementById('intermediateQuestionSection');
-intermediateQuestionSection.style.color = '#0F0';
+intermediateQuestionSection.style.color = '#081';
 intermediateQuestionSection.addEventListener('click', intermediate_question);
 
 var advancedQuestionSection = document.getElementById('advancedQuestionSection');

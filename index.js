@@ -37,9 +37,7 @@ answer.style.display = 'none';
 var currentBasic = 0;
 
 function basic_question() {
-	options.style.display = 'block';
-	question.style.display = 'block';
-	sectionTitles.style.display = 'none';
+	reset();
   	question.innerHTML = basicQuestions[currentBasic].question;
   	optionOne.innerHTML = basicQuestions[currentBasic].options[0];
 	optionTwo.innerHTML = basicQuestions[currentBasic].options[1];
@@ -63,9 +61,7 @@ function basic_question() {
 var currentIntermediate = 0;
 
 function intermediate_question() {
-	options.style.display = 'block';
-	question.style.display = 'block';
-	sectionTitles.style.display = 'none';
+	reset();
   	question.innerHTML = intermediateQuestions[currentIntermediate].question;
   	optionOne.innerHTML = intermediateQuestions[currentIntermediate].options[0];
 	optionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
@@ -89,10 +85,7 @@ function intermediate_question() {
 var currentAdvanced = 0;
 
 function advanced_question() {
-	options.style.display = 'block';
-	question.style.display = 'block';
-	sectionTitles.style.display = 'none';
-	answer.style.display = 'none';
+	reset();
   	question.innerHTML = advancedQuestions[currentAdvanced].question;
   	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
 	optionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];
@@ -121,4 +114,11 @@ function home() {
 	currentBasic = 0;
 	currentIntermediate = 0;
 	currentAdvanced = 0;
+}
+
+function reset() {
+	options.style.display = 'block';
+	question.style.display = 'block';
+	sectionTitles.style.display = 'none';
+	answer.style.display = 'none';
 }

@@ -29,7 +29,7 @@ function basic_question() {
 	} else if (currentBasic === 3) {
 	  document.getElementById('optionOne').addEventListener('click', basic_question);
 	} else if (currentBasic === 4) {
-	  document.getElementById('optionThree').addEventListener('click', basic_question);
+	  document.getElementById('optionThree').addEventListener('click', intermediate_question);
 	}
     currentBasic = currentBasic + 1;
 }

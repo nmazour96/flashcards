@@ -28,29 +28,29 @@ var basicQuestions = [
 
 var intermediateQuestions = [
     {
-	question: '2 + 2 = ?',
-	options: ['seven', 'four', 'five', 'three'],
-	answer: ['four'],
+	question: '5 * 10 = ?',
+	options: ['15', '2', '50', '30'],
+	answer: ['50'],
     },
     {
-	question: '12 - 5 = ?',
-	options: ['eight', 'seventeen', 'seven', 'ten'],
-	answer: ['seven'],
+	question: '9 * 12 = ?',
+	options: ['108', '96', '65', '110'],
+	answer: ['108'],
     },
     {
-	question: 'What is the answer to this third question?',
-	options: ['This choice', 'This other choice', 'This yet another choice'],
-	answer: ['This choice'],
+	question: '150 / 25 = ?',
+	options: ['4', '5', '6', '7'],
+	answer: ['6'],
     },
     {
-	question: 'What is the answer to this fourth question?',
-	options: ['This choice', 'This other choice', 'This yet another choice'],
-	answer: ['This choice'],
+	question: '224 / 8 = ?',
+	options: ['26', '28', '13', '29'],
+	answer: ['28'],
     },
     {
-	question: 'What is the answer to this fifth question?',
-	options: ['This choice', 'This other choice', 'This yet another choice'],
-	answer: ['This choice'],
+	question: '54 * (12 / 4) = ?',
+	options: ['34', '176', '137', '162'],
+	answer: ['162'],
     },
 ];
 

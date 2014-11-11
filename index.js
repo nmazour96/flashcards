@@ -50,7 +50,7 @@ function intermediate_question() {
 	} else if (currentBasic === 3) {
 	  document.getElementById('optionOne').addEventListener('click', intermediate_question);
 	} else if (currentBasic === 4) {
-	  document.getElementById('optionThree').addEventListener('click', intermediate_question);
+	  document.getElementById('optionThree').addEventListener('click', advanced_question);
 	}
     currentBasic = currentBasic + 1;
 }

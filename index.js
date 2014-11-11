@@ -31,7 +31,7 @@ var advancedQuestionSection = document.getElementById('advancedQuestionSection')
 advancedQuestionSection.style.color = '#00F';
 advancedQuestionSection.addEventListener('click', advanced_question);
 
-var answer - document.getElementById('answer');
+var answer = document.getElementById('answer');
 answer.style.color = '#F00';
 
 var currentBasic = 0;

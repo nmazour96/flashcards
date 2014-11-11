@@ -118,5 +118,4 @@ function reset() {
 	options.style.display = 'block';
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
-	answer.style.display = 'none';
 }

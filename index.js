@@ -26,7 +26,14 @@ function basic_question() {
     currentBasic = currentBasic + 1;
 }
 
+<<<<<<< HEAD
 document.getElementById('basicQuestion').innerHTML = basicQuestions[0].question;
+=======
+document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
+document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];
+document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
+document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
+>>>>>>> 468b1115e82f4aa1f055ab8eed93268ee3f9f3b7
 
 document.getElementById('optionOne').innerHTML = basicQuestions[0].options[0];
 document.getElementById('optionTwo').innerHTML = basicQuestions[0].options[1];

@@ -71,6 +71,7 @@ function intermediate_question() {
 var currentAdvanced = 0;
 
 function advanced_question() {
+	document.getElementById('advancedQuestionInstructions').innerHTML = "Solve for x.";
   	document.getElementById('question').innerHTML = advancedQuestions[currentAdvanced].question;
   	document.getElementById('optionOne').innerHTML = advancedQuestions[currentAdvanced].options[0];
 	document.getElementById('optionTwo').innerHTML = advancedQuestions[currentAdvanced].options[1];

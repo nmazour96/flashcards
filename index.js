@@ -12,8 +12,9 @@ basicQuestionSection.style.fontSize = '50px';
 basicQuestionSection.style.color = '#F00';
 basicQuestionSection.addEventListener('click', basic_question);
 
+var currentBasic = 0;
+
 function basic_question() {
-	var currentBasic = 0;
   	document.getElementById('question').innerHTML = basicQuestions[currentBasic].question;
   	document.getElementById('optionOne').innerHTML = basicQuestions[currentBasic].options[0];
 	document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].options[1];
@@ -33,8 +34,9 @@ function basic_question() {
     currentBasic = currentBasic + 1;
 }
 
+var currentIntermediate = 0;
+
 function intermediate_question() {
-	var currentIntermediate = 0;
   	document.getElementById('question').innerHTML = intermediateQuestions[currentIntermediate].question;
   	document.getElementById('optionOne').innerHTML = intermediateQuestions[currentIntermediate].options[0];
 	document.getElementById('optionTwo').innerHTML = intermediateQuestions[currentIntermediate].options[1];

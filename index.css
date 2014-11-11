@@ -13,6 +13,11 @@ div {
 .question {
 	font-size: 75px;
 }
+
 .line-separator {
-    height: 30em;
+    height: 30px;
+}
+
+html {
+    background-image: url(https://c1.staticflickr.com/3/2233/2435161563_d1367895e7_z.jpg?zz=1);
 }

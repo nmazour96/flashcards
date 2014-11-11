@@ -13,3 +13,6 @@ div {
 .question {
 	font-size: 75px;
 }
+.line-separator {
+    height: 30em;
+}

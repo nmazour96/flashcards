@@ -38,17 +38,17 @@ var intermediateQuestions = [
 	answer: ['108'],
     },
     {
-	question: '150 / 25 = ?',
+	question: '150 ÷ 25 = ?',
 	options: ['4', '5', '6', '7'],
 	answer: ['6'],
     },
     {
-	question: '224 / 8 = ?',
+	question: '224 ÷ 8 = ?',
 	options: ['26', '28', '13', '29'],
 	answer: ['28'],
     },
     {
-	question: '54 * (12 / 4) = ?',
+	question: '54 * 3 = ?',
 	options: ['34', '176', '137', '162'],
 	answer: ['162'],
     },
@@ -56,28 +56,28 @@ var intermediateQuestions = [
 
 var advancedQuestions = [
     {
-	question: '2 + 2 = ?',
-	options: ['seven', 'four', 'five', 'three'],
-	answer: ['four'],
+	question: '25 = 10x + 5',
+	options: ['no solution', '2', '6', '5'],
+	answer: ['2'],
     },
     {
-	question: '12 - 5 = ?',
-	options: ['eight', 'seventeen', 'seven', 'ten'],
-	answer: ['seven'],
+	question: '(6 + 25 − 7) ÷ 6',
+	options: ['no solution', '14', '5', '4'],
+	answer: ['4'],
     },
     {
-	question: 'What is the answer to this third question?',
-	options: ['This choice', 'This other choice', 'This yet another choice'],
-	answer: ['This choice'],
+	question: '2(x + 5) = −2',
+	options: ['no solution', '-6', '-4', '-2'],
+	answer: ['-6'],
     },
     {
-	question: 'What is the answer to this fourth question?',
-	options: ['This choice', 'This other choice', 'This yet another choice'],
-	answer: ['This choice'],
+	question: 'p − 4 = −9 + p',
+	options: ['no solution', '-2/5', '5', '2'],
+	answer: ['no solution'],
     },
     {
-	question: 'What is the answer to this fifth question?',
-	options: ['This choice', 'This other choice', 'This yet another choice'],
-	answer: ['This choice'],
+	question: 'log 90',
+	options: ['no solution', '3.28', '4.53', '1.95'],
+	answer: ['1.95'],
     },
 ];

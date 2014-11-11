@@ -14,7 +14,7 @@ var title = document.getElementById('title');
 title.style.fontSize = '75px';
 title.style.textAlign = 'center';
 title.style.color = '#FFF';
-titel.style.backgroundColor = '#000'
+title.style.backgroundColor = '#000';
 
 var sectionTitles = document.getElementById('sectionTitles');
 sectionTitles.style.textAlign = 'center';

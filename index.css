@@ -3,9 +3,17 @@ p {
 }
 
 button {
-	font-size: 25px;
+	font-size: 35px;
 }
 
 div {
 	text-align: center;
+}
+
+#question {
+	font-size: 75px;
+}
+
+#advancedQuestionIntructions {
+	font-size: 45px;
 }

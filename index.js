@@ -77,13 +77,13 @@ function advanced_question() {
 	document.getElementById('optionThree').innerHTML = advancedQuestions[currentAdvanced].options[2];
 	document.getElementById('optionFour').innerHTML = advancedQuestions[currentAdvanced].options[3];
 	if (currentAdvanced === 0) {
-	  document.getElementById('optionTwo').addEventListener('click', intermediate_question);
+	  document.getElementById('optionTwo').addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 1) {
-	  document.getElementById('optionFour').addEventListener('click', intermediate_question);
+	  document.getElementById('optionFour').addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 2) {
-	  document.getElementById('optionTwo').addEventListener('click', intermediate_question);
+	  document.getElementById('optionTwo').addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 3) {
-	  document.getElementById('optionOne').addEventListener('click', intermediate_question);
+	  document.getElementById('optionOne').addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 4) {
 	  document.getElementById('optionFour').addEventListener('click', advanced_question);
 	}

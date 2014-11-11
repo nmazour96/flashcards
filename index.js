@@ -74,7 +74,7 @@ function intermediate_question() {
 	optionFour.innerHTML = intermediateQuestions[currentIntermediate].options[3];
 	if (currentIntermediate === 0) {
 	  optionThree.addEventListener('click', intermediate_question);
-	  answer();
+	  answer.style.display = 'block';
 	} else if (currentIntermediate === 1) {
 	  optionOne.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 2) {

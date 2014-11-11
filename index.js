@@ -7,6 +7,8 @@ var optionTwo = document.getElementById('optionTwo');
 var optionThree = document.getElementById('optionThree');
 var optionFour = document.getElementById('optionFour');
 
+document.getElementById('advancedQuestionInstructions');
+
 var options = document.getElementById('options');
 options.style.display = 'none';
 
@@ -34,6 +36,7 @@ advancedQuestionSection.addEventListener('click', advanced_question);
 var currentBasic = 0;
 
 function basic_question() {
+	options.style.display = 'block';
   	question.innerHTML = basicQuestions[currentBasic].question;
   	optionOne.innerHTML = basicQuestions[currentBasic].options[0];
 	optionTwo.innerHTML = basicQuestions[currentBasic].options[1];
@@ -56,6 +59,7 @@ function basic_question() {
 var currentIntermediate = 0;
 
 function intermediate_question() {
+	options.style.display = 'block';
   	question.innerHTML = intermediateQuestions[currentIntermediate].question;
   	optionOne.innerHTML = intermediateQuestions[currentIntermediate].options[0];
 	optionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
@@ -78,6 +82,7 @@ function intermediate_question() {
 var currentAdvanced = 0;
 
 function advanced_question() {
+	options.style.display = 'block';
 	document.getElementById('advancedQuestionInstructions').innerHTML = "Solve for x.";
   	question.innerHTML = advancedQuestions[currentAdvanced].question;
   	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];

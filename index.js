@@ -19,6 +19,15 @@ function basic_question() {
 	document.getElementById('optionTwo').innerHTML = basicQuestions[currentBasic].options[1];
 	document.getElementById('optionThree').innerHTML = basicQuestions[currentBasic].options[2];
 	document.getElementById('optionFour').innerHTML = basicQuestions[currentBasic].options[3];
+	if (currentBasic === 1) {
+	  document.getElementById('optionThree').addEventListener('click', basic_question);
+	} else if (currentBasic === 2) {
+	  document.getElementById('optionFour').addEventListener('click', basic_question);
+	} else if (currentBasic === 3) {
+	  document.getElementById('optionOne').addEventListener('click', basic_question);
+	} else if (currentBasic === 4) {
+	  document.getElementById('optionThree').addEventListener('click', basic_question);
+	}
     currentBasic = currentBasic + 1;
 }
 
@@ -29,16 +38,3 @@ document.getElementById('optionThree').innerHTML = basicQuestions[0].options[2];
 document.getElementById('optionFour').innerHTML = basicQuestions[0].options[3];
 
 document.getElementById('optionTwo').addEventListener('click', basic_question);
-
-function basic_quesiton_answer() {
-	if (currentBasic === 1) {
-	  document.getElementById('optionThree').addEventListener('click', basic_question);
-	} else if (currentBasic === 2) {
-	  document.getElementById('optionFour').addEventListener('click', basic_question);
-	} else if (currentBasic === 3) {
-	  document.getElementById('optionOne').addEventListener('click', basic_question);
-	} else if (currentBasic === 4) {
-	  document.getElementById('optionThree').addEventListener('click', basic_question);
-	}
-}
-

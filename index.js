@@ -109,7 +109,7 @@ function advanced_question() {
 function home() {
 	options.style.display = 'none';
 	question.style.display = 'none';
-	questionTitles.style.dispay = 'block';
+	sectionTitles.style.dispay = 'block';
 	currentBasic = 0;
 	currentIntermediate = 0;
 	currentAdvanced = 0;

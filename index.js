@@ -7,8 +7,6 @@ var optionTwo = document.getElementById('optionTwo');
 var optionThree = document.getElementById('optionThree');
 var optionFour = document.getElementById('optionFour');
 
-document.getElementById('advancedQuestionInstructions');
-
 var options = document.getElementById('options');
 options.style.display = 'none';
 
@@ -83,7 +81,6 @@ var currentAdvanced = 0;
 
 function advanced_question() {
 	options.style.display = 'block';
-	document.getElementById('advancedQuestionInstructions').innerHTML = "Solve for x.";
   	question.innerHTML = advancedQuestions[currentAdvanced].question;
   	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
 	optionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];

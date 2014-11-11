@@ -71,7 +71,7 @@ var advancedQuestions = [
 	answer: ['-6'],
     },
     {
-	question: 'p − 4 = −9 + p',
+	question: 'x − 4 = −9 + x',
 	options: ['no solution', '-2/5', '5', '2'],
 	answer: ['no solution'],
     },

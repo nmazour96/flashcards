@@ -15,13 +15,13 @@ basicQuestionSection.addEventListener('click', basic_question);
 var intermediateQuestionSection = document.getElementById('intermediateQuestionSection');
 intermediateQuestionSection.style.textAlign = 'center';
 intermediateQuestionSection.style.fontSize = '50px';
-intermediateQuestionSection.style.color = '#F00';
+intermediateQuestionSection.style.color = '#0F0';
 intermediateQuestionSection.addEventListener('click', intermediate_question);
 
 var advancedQuestionSection = document.getElementById('advancedQuestionSection');
 advancedQuestionSection.style.textAlign = 'center';
 advancedQuestionSection.style.fontSize = '50px';
-advancedQuestionSection.style.color = '#F00';
+advancedQuestionSection.style.color = '#00F';
 advancedQuestionSection.addEventListener('click', advanced_question);
 
 var currentBasic = 0;
@@ -41,7 +41,7 @@ function basic_question() {
 	} else if (currentBasic === 3) {
 	  document.getElementById('optionOne').addEventListener('click', basic_question);
 	} else if (currentBasic === 4) {
-	  document.getElementById('optionThree').addEventListener('click', intermediate_question);
+	  document.getElementById('optionThree').addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
 }
@@ -63,7 +63,7 @@ function intermediate_question() {
 	} else if (currentIntermediate === 3) {
 	  document.getElementById('optionTwo').addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 4) {
-	  document.getElementById('optionFour').addEventListener('click', advanced_question);
+	  document.getElementById('optionFour').addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
 }
@@ -85,7 +85,11 @@ function advanced_question() {
 	} else if (currentAdvanced === 3) {
 	  document.getElementById('optionOne').addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 4) {
-	  document.getElementById('optionFour').addEventListener('click', advanced_question);
+	  document.getElementById('optionFour').addEventListener('click', home);
 	}
    currentAdvanced = currentAdvanced + 1;
+}
+
+function home() {
+	
 }

@@ -10,10 +10,6 @@ div {
 	text-align: center;
 }
 
-#question {
+.question {
 	font-size: 75px;
-}
-
-#advancedQuestionIntructions {
-	font-size: 45px;
 }

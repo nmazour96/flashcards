@@ -111,7 +111,4 @@ function home() {
 	question.style.display = 'none';
 	answer.style.display = 'block';
 	sectionTitles.style.display = 'block';
-	currentBasic = 0;
-	currentIntermediate = 0;
-	currentAdvanced = 0;
 }

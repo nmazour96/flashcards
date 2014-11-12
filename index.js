@@ -10,14 +10,10 @@ var optionFour = document.getElementById('optionFour');
 var options = document.getElementById('options');
 options.style.display = 'none';
 
-var title = document.getElementById('title');
-title.style.fontSize = '75px';
-title.style.textAlign = 'center';
-title.style.color = '#FFF';
-title.style.backgroundColor = '#000';
+var answer = document.getElementById('answer');
+answer.style.display = 'none';
 
 var sectionTitles = document.getElementById('sectionTitles');
-sectionTitles.style.textAlign = 'center';
 sectionTitles.style.fontSize = '50px';
 
 var basicQuestionSection = document.getElementById('basicQuestionSection');
@@ -31,9 +27,6 @@ intermediateQuestionSection.addEventListener('click', intermediate_question);
 var advancedQuestionSection = document.getElementById('advancedQuestionSection');
 advancedQuestionSection.style.color = '#00F';
 advancedQuestionSection.addEventListener('click', advanced_question);
-
-var answer = document.getElementById('answer');
-answer.style.display = 'none';
 
 var currentBasic = 0;
 
@@ -110,7 +103,7 @@ function advanced_question() {
 	} else if (currentAdvanced === 4) {
 	  optionFour.addEventListener('click', home);
 	}
-   currentAdvanced = currentAdvanced + 1;
+	currentAdvanced = currentAdvanced + 1;
 }
 
 function home() {
@@ -118,7 +111,4 @@ function home() {
 	question.style.display = 'none';
 	answer.style.display = 'block';
 	sectionTitles.style.display = 'block';
-	currentBasic = 0;
-	currentIntermediate = 0;
-	currentAdvanced = 0;
 }

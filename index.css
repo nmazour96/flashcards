@@ -26,3 +26,9 @@ html {
 img {
 	margin-left: 37%;
 }
+
+h1 {
+	font-size: 75px;
+	color: #FFF;
+	background-color: #000;
+}

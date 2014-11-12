@@ -29,7 +29,7 @@ var basicQuestions = [
 var intermediateQuestions = [
     {
 	question: '5 * 10 = ?',
-	options: ['15', '6', '50', '30'],
+	options: ['15', '50', '6', '30'],
 	answer: ['50'],
     },
     {

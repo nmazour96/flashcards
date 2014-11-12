@@ -87,8 +87,8 @@ function advanced_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
 	answer.style.display = 'none';
-  	question.innerHTML = advancedQuestions[currentAdvanced].question;
-  	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
+	question.innerHTML = advancedQuestions[currentAdvanced].question;
+	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
 	optionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];
 	optionThree.innerHTML = advancedQuestions[currentAdvanced].options[2];
 	optionFour.innerHTML = advancedQuestions[currentAdvanced].options[3];
@@ -111,4 +111,7 @@ function home() {
 	question.style.display = 'none';
 	answer.style.display = 'block';
 	sectionTitles.style.display = 'block';
+	currentBasic = 0;
+	currentIntermediate = 0;
+	currentAdvanced = 0;
 }

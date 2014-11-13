@@ -17,11 +17,11 @@ var advancedOptionTwo = document.getElementById('advancedOptionTwo');
 var advancedOptionThree = document.getElementById('advancedOptionThree');
 var advancedOptionFour = document.getElementById('advancedOptionFour');
 
-var basicOptions = document.getElementById(basicOptions);
+var basicOptions = document.getElementById('basicOptions');
 basicOptions.style.display = 'none';
-var intermediateOptions = document.getElementById(intermediateOptions);
+var intermediateOptions = document.getElementById('intermediateOptions');
 intermediateOptions.style.display = 'none';
-var advancedOptions = document.getElementById(advancedOptions);
+var advancedOptions = document.getElementById('advancedOptions');
 advancedOptions.style.display = 'none';
 
 var answer = document.getElementById('answer');

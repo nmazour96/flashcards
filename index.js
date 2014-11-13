@@ -72,7 +72,6 @@ function basic_question() {
 		basicOptionThree.addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
-    total_score();
 }
 
 var currentIntermediate = 0;
@@ -102,7 +101,6 @@ function intermediate_question() {
 		intermediateOptionFour.addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
-    total_score();
 }
 
 var currentAdvanced = 0;
@@ -133,7 +131,6 @@ function advanced_question() {
 		advancedOptionFour.addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
-	total_score();
 }
 
 function home() {
@@ -161,15 +158,4 @@ function intermediate_correct() {
 function advanced_correct() {
 	answer.innerHTML = 'CORRECT';
 	advanced_question();
-}
-
-function total_score() {
-  if (basic_correct()) {
-  	score = score + 1;
-  } else if (intermediate_correct()) {
-  	score = score + 1;
-  } else if (advanced_correct()) {
-  	score = score + 1;
-  }
-  correct.innerHTML = score;
 }

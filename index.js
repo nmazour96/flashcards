@@ -2,10 +2,28 @@
 /*jslint browser: true*/ // This line tells jsLint that the code will run in a browser.
 
 var question = document.getElementById('question');
-var optionOne = document.getElementById('optionOne');
-var optionTwo = document.getElementById('optionTwo');
-var optionThree = document.getElementById('optionThree');
-var optionFour = document.getElementById('optionFour');
+var basicOptionOne = document.getElementById('basicOptionOne');
+var basicOptionTwo = document.getElementById('basicOptionTwo');
+var basicOptionThree = document.getElementById('basicOptionThree');
+var basicOptionFour = document.getElementById('basicOptionFour');
+
+var intermediateOptionOne = document.getElementById('intermediateOptionOne');
+var intermediateOptionTwo = document.getElementById('intermediateOptionTwo');
+var intermediateOptionThree = document.getElementById('intermediateOptionThree');
+var intermediateOptionFour = document.getElementById('intermediateOptionFour');
+
+var advancedOptionOne = document.getElementById('advancedOptionOne');
+var advancedOptionTwo = document.getElementById('advancedOptionTwo');
+var advancedOptionThree = document.getElementById('advancedOptionThree');
+var advancedOptionFour = document.getElementById('advancedOptionFour');
+
+var basicOptions = document.getElementById(basicOptions);
+basicOptions.style.display = 'none';
+var intermediateOptions = document.getElementById(intermediateOptions);
+intermediateOptions.style.display = 'none';
+var advancedOptions = document.getElementById(advancedOptions);
+advancedOptions.style.display = 'none';
+
 var answer = document.getElementById('answer');
 
 var options = document.getElementById('options');
@@ -29,25 +47,28 @@ advancedQuestionSection.addEventListener('click', advanced_question);
 var currentBasic = 0;
 
 function basic_question() {
-	options.style.display = 'block';
+	basicOptions.style.display = 'block';
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
   	question.innerHTML = basicQuestions[currentBasic].question;
-  	optionOne.innerHTML = basicQuestions[currentBasic].options[0];
-	optionTwo.innerHTML = basicQuestions[currentBasic].options[1];
-	optionThree.innerHTML = basicQuestions[currentBasic].options[2];
-	optionFour.innerHTML = basicQuestions[currentBasic].options[3];
+  	basicOptionOne.innerHTML = basicQuestions[currentBasic].options[0];
+	basicOptionTwo.innerHTML = basicQuestions[currentBasic].options[1];
+	basicOptionThree.innerHTML = basicQuestions[currentBasic].options[2];
+	basicOptionFour.innerHTML = basicQuestions[currentBasic].options[3];
+	basicOptionOne.removeEventListener('click', basic_question);
+	basicOptionTwo.removeEventListener('click', basic_question);
+	basicOptionThree.removeEventListener('click', basic_question);
+	basicOptionFour.removeEventListener('click', basic_question);
 	if (currentBasic === 0) {
-	  optionTwo.addEventListener('click', basic_question);
+	  basicOptionTwo.addEventListener('click', basic_question);
 	} else if (currentBasic === 1) {
-	  optionThree.addEventListener('click', basic_question);
+	  basicOptionThree.addEventListener('click', basic_question);
 	} else if (currentBasic === 2) {
-	  optionFour.removeEventListener('click',home);
-	  optionFour.addEventListener('click', basic_question);
+	  basicOptionFour.addEventListener('click', basic_question);
 	} else if (currentBasic === 3) {
-	  optionOne.addEventListener('click', basic_question);
+	  basicOptionOne.addEventListener('click', basic_question);
 	} else if (currentBasic === 4) {
-	  optionThree.addEventListener('click', home);
+	  basicOptionThree.addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
 }
@@ -55,25 +76,28 @@ function basic_question() {
 var currentIntermediate = 0;
 
 function intermediate_question() {
-	options.style.display = 'block';
+	intermediateOptions.style.display = 'block';
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
   	question.innerHTML = intermediateQuestions[currentIntermediate].question;
-  	optionOne.innerHTML = intermediateQuestions[currentIntermediate].options[0];
-	optionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
-	optionThree.innerHTML = intermediateQuestions[currentIntermediate].options[2];
-	optionFour.innerHTML = intermediateQuestions[currentIntermediate].options[3];
+  	intermediateOptionOne.innerHTML = intermediateQuestions[currentIntermediate].options[0];
+	intermediateOptionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
+	intermediateOptionThree.innerHTML = intermediateQuestions[currentIntermediate].options[2];
+	intermediateOptionFour.innerHTML = intermediateQuestions[currentIntermediate].options[3];
+	intermediateOptionOne.removeEventListener('click', intermediate_question);
+	intermediateOptionTwo.removeEventListener('click', intermediate_question);
+	intermediateOptionThree.removeEventListener('click', intermediate_question);
+	intermediateOptionFour.removeEventListener('click', intermediate_question);
 	if (currentIntermediate === 0) {
-	  optionTwo.addEventListener('click', intermediate_question);
+	  intermediateOptionTwo.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 1) {
-	  optionOne.addEventListener('click', intermediate_question);
+	  intermediateOptionOne.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 2) {
-	  optionThree.removeEventListener('click', home);
-	  optionThree.addEventListener('click', intermediate_question);
+	  intermediateOptionThree.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 3) {
-	  optionTwo.addEventListener('click', intermediate_question);
+	  intermediateOptionTwo.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 4) {
-	  optionFour.addEventListener('click', home);
+	  intermediateOptionFour.addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
 }
@@ -81,31 +105,36 @@ function intermediate_question() {
 var currentAdvanced = 0;
 
 function advanced_question() {
-	options.style.display = 'block';
+	advancedOptions.style.display = 'block';
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
 	question.innerHTML = advancedQuestions[currentAdvanced].question;
-	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
-	optionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];
-	optionThree.innerHTML = advancedQuestions[currentAdvanced].options[2];
-	optionFour.innerHTML = advancedQuestions[currentAdvanced].options[3];
+	advancedOptionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
+	advancedOptionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];
+	advancedOptionThree.innerHTML = advancedQuestions[currentAdvanced].options[2];
+	advancedOptionFour.innerHTML = advancedQuestions[currentAdvanced].options[3];
+	advancedOptionOne.removeEventListener('click', advanced_question);
+	advancedOptionTwo.removeEventListener('click', advanced_question);
+	advancedOptionThree.removeEventListener('click', advanced_question);
+	advancedOptionFour.removeEventListener('click', advanced_question);
 	if (currentAdvanced === 0) {
-	  optionTwo.addEventListener('click', advanced_question);
+	  advancedOptionTwo.addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 1) {
-	  optionFour.removeEventListener('click',home);
-	  optionFour.addEventListener('click', advanced_question);
+	  advancedOptionFour.addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 2) {
-	  optionTwo.addEventListener('click', advanced_question);
+	  advancedOptionTwo.addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 3) {
-	  optionOne.addEventListener('click', advanced_question);
+	  advancedOptionOne.addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 4) {
-	  optionFour.addEventListener('click', home);
+	  advancedOptionFour.addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
 }
 
 function home() {
-	options.style.display = 'none';
+	basicOptions.style.display = 'none';
+	intermediateOptions.style.display = 'none';
+	advancedOptions.style.display = 'none';
 	question.style.display = 'none';
 	answer.innerHTML = '';
 	sectionTitles.style.display = 'block';

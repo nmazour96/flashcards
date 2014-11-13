@@ -41,6 +41,7 @@ function basic_question() {
 	} else if (currentBasic === 1) {
 	  optionThree.addEventListener('click', basic_question);
 	} else if (currentBasic === 2) {
+	  optionFour.removeEventListener('click',home);
 	  optionFour.addEventListener('click', basic_question);
 	} else if (currentBasic === 3) {
 	  optionOne.addEventListener('click', basic_question);
@@ -66,6 +67,7 @@ function intermediate_question() {
 	} else if (currentIntermediate === 1) {
 	  optionOne.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 2) {
+	  optionThree.removeEventListener('click', home);
 	  optionThree.addEventListener('click', intermediate_question);
 	} else if (currentIntermediate === 3) {
 	  optionTwo.addEventListener('click', intermediate_question);
@@ -89,6 +91,7 @@ function advanced_question() {
 	if (currentAdvanced === 0) {
 	  optionTwo.addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 1) {
+	  optionFour.removeEventListener('click',home);
 	  optionFour.addEventListener('click', advanced_question);
 	} else if (currentAdvanced === 2) {
 	  optionTwo.addEventListener('click', advanced_question);
@@ -109,3 +112,6 @@ function home() {
 	currentAdvanced = 0;
 }
 
+function score () {
+	
+}

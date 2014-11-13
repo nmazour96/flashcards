@@ -10,9 +10,6 @@ var optionFour = document.getElementById('optionFour');
 var options = document.getElementById('options');
 options.style.display = 'none';
 
-var answer = document.getElementById('answer');
-answer.style.display = 'none';
-
 var sectionTitles = document.getElementById('sectionTitles');
 sectionTitles.style.fontSize = '50px';
 
@@ -34,7 +31,6 @@ function basic_question() {
 	options.style.display = 'block';
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
-	answer.style.display = 'none';
   	question.innerHTML = basicQuestions[currentBasic].question;
   	optionOne.innerHTML = basicQuestions[currentBasic].options[0];
 	optionTwo.innerHTML = basicQuestions[currentBasic].options[1];
@@ -60,7 +56,6 @@ function intermediate_question() {
 	options.style.display = 'block';
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
-	answer.style.display = 'none';
   	question.innerHTML = intermediateQuestions[currentIntermediate].question;
   	optionOne.innerHTML = intermediateQuestions[currentIntermediate].options[0];
 	optionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
@@ -86,7 +81,6 @@ function advanced_question() {
 	options.style.display = 'block';
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
-	answer.style.display = 'none';
 	question.innerHTML = advancedQuestions[currentAdvanced].question;
 	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
 	optionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];
@@ -109,9 +103,9 @@ function advanced_question() {
 function home() {
 	options.style.display = 'none';
 	question.style.display = 'none';
-	answer.style.display = 'block';
 	sectionTitles.style.display = 'block';
 	currentBasic = 0;
 	currentIntermediate = 0;
 	currentAdvanced = 0;
 }
+

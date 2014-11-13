@@ -2,29 +2,29 @@
 /*jslint browser: true*/ // This line tells jsLint that the code will run in a browser.
 
 var question = document.getElementById('question');
+
+var answer = document.getElementById('answer');
+
+var basicOptions = document.getElementById('basicOptions');
+basicOptions.style.display = 'none';
 var basicOptionOne = document.getElementById('basicOptionOne');
 var basicOptionTwo = document.getElementById('basicOptionTwo');
 var basicOptionThree = document.getElementById('basicOptionThree');
 var basicOptionFour = document.getElementById('basicOptionFour');
 
+var intermediateOptions = document.getElementById('intermediateOptions');
+intermediateOptions.style.display = 'none';
 var intermediateOptionOne = document.getElementById('intermediateOptionOne');
 var intermediateOptionTwo = document.getElementById('intermediateOptionTwo');
 var intermediateOptionThree = document.getElementById('intermediateOptionThree');
 var intermediateOptionFour = document.getElementById('intermediateOptionFour');
 
+var advancedOptions = document.getElementById('advancedOptions');
+advancedOptions.style.display = 'none';
 var advancedOptionOne = document.getElementById('advancedOptionOne');
 var advancedOptionTwo = document.getElementById('advancedOptionTwo');
 var advancedOptionThree = document.getElementById('advancedOptionThree');
 var advancedOptionFour = document.getElementById('advancedOptionFour');
-
-var basicOptions = document.getElementById('basicOptions');
-basicOptions.style.display = 'none';
-var intermediateOptions = document.getElementById('intermediateOptions');
-intermediateOptions.style.display = 'none';
-var advancedOptions = document.getElementById('advancedOptions');
-advancedOptions.style.display = 'none';
-
-var answer = document.getElementById('answer');
 
 var sectionTitles = document.getElementById('sectionTitles');
 sectionTitles.style.fontSize = '50px';
@@ -52,20 +52,29 @@ function basic_question() {
 	basicOptionTwo.innerHTML = basicQuestions[currentBasic].options[1];
 	basicOptionThree.innerHTML = basicQuestions[currentBasic].options[2];
 	basicOptionFour.innerHTML = basicQuestions[currentBasic].options[3];
-	basicOptionOne.removeEventListener('click', basic_question);
-	basicOptionTwo.removeEventListener('click', basic_question);
-	basicOptionThree.removeEventListener('click', basic_question);
-	basicOptionFour.removeEventListener('click', basic_question);
+	basicOptionOne.addEventListener('click', incorrect);
+	basicOptionOne.removeEventListener('click', basic_correct);
+	basicOptionTwo.addEventListener('click', incorrect);
+	basicOptionTwo.removeEventListener('click', basic_correct);
+	basicOptionThree.addEventListener('click', incorrect);
+	basicOptionThree.removeEventListener('click', basic_correct);
+	basicOptionFour.addEventListener('click', incorrect);
+	basicOptionFour.removeEventListener('click', basic_correct);
 	if (currentBasic === 0) {
-	  basicOptionTwo.addEventListener('click', basic_question);
+		basicOptionTwo.removeEventListener('click', incorrect);
+		basicOptionTwo.addEventListener('click', basic_correct);
 	} else if (currentBasic === 1) {
-	  basicOptionThree.addEventListener('click', basic_question);
+		basicOptionThree.removeEventListener('click', incorrect);
+		basicOptionThree.addEventListener('click', basic_correct);
 	} else if (currentBasic === 2) {
-	  basicOptionFour.addEventListener('click', basic_question);
+		basicOptionFour.removeEventListener('click', incorrect);
+		basicOptionFour.addEventListener('click', basic_correct);
 	} else if (currentBasic === 3) {
-	  basicOptionOne.addEventListener('click', basic_question);
+		basicOptionOne.removeEventListener('click', incorrect);
+		basicOptionOne.addEventListener('click', basic_correct);
 	} else if (currentBasic === 4) {
-	  basicOptionThree.addEventListener('click', home);
+		basicOptionThree.removeEventListener('click', incorrect);
+		basicOptionThree.addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
 }
@@ -81,20 +90,29 @@ function intermediate_question() {
 	intermediateOptionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
 	intermediateOptionThree.innerHTML = intermediateQuestions[currentIntermediate].options[2];
 	intermediateOptionFour.innerHTML = intermediateQuestions[currentIntermediate].options[3];
-	intermediateOptionOne.removeEventListener('click', intermediate_question);
-	intermediateOptionTwo.removeEventListener('click', intermediate_question);
-	intermediateOptionThree.removeEventListener('click', intermediate_question);
-	intermediateOptionFour.removeEventListener('click', intermediate_question);
+	intermediateOptionOne.addEventListener('click', incorrect);
+	intermediateOptionOne.removeEventListener('click', intermediate_correct);
+	intermediateOptionTwo.addEventListener('click', incorrect);
+	intermediateOptionTwo.removeEventListener('click', intermediate_correct);
+	intermediateOptionThree.addEventListener('click', incorrect);
+	intermediateOptionThree.removeEventListener('click', intermediate_correct);
+	intermediateOptionFour.addEventListener('click', incorrect);
+	intermediateOptionFour.removeEventListener('click', intermediate_correct);
 	if (currentIntermediate === 0) {
-	  intermediateOptionTwo.addEventListener('click', intermediate_question);
+		intermediateOptionTwo.removeEventListener('click', incorrect);
+		intermediateOptionTwo.addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 1) {
-	  intermediateOptionOne.addEventListener('click', intermediate_question);
+		intermediateOptionOne.removeEventListener('click', incorrect);
+		intermediateOptionOne.addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 2) {
-	  intermediateOptionThree.addEventListener('click', intermediate_question);
+		intermediateOptionThree.removeEventListener('click', incorrect);
+		intermediateOptionThree.addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 3) {
-	  intermediateOptionTwo.addEventListener('click', intermediate_question);
+		intermediateOptionTwo.removeEventListener('click', incorrect);
+		intermediateOptionTwo.addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 4) {
-	  intermediateOptionFour.addEventListener('click', home);
+		intermediateOptionFour.removeEventListener('click', incorrect);
+		intermediateOptionFour.addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
 }
@@ -110,20 +128,29 @@ function advanced_question() {
 	advancedOptionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];
 	advancedOptionThree.innerHTML = advancedQuestions[currentAdvanced].options[2];
 	advancedOptionFour.innerHTML = advancedQuestions[currentAdvanced].options[3];
-	advancedOptionOne.removeEventListener('click', advanced_question);
-	advancedOptionTwo.removeEventListener('click', advanced_question);
-	advancedOptionThree.removeEventListener('click', advanced_question);
-	advancedOptionFour.removeEventListener('click', advanced_question);
+	advancedOptionOne.addEventListener('click', incorrect);
+	advancedOptionOne.removeEventListener('click', advanced_correct);
+	advancedOptionTwo.addEventListener('click', incorrect);
+	advancedOptionTwo.removeEventListener('click', advanced_correct);
+	advancedOptionThree.addEventListener('click', incorrect);
+	advancedOptionThree.removeEventListener('click', advanced_correct);
+	advancedOptionFour.addEventListener('click', incorrect);
+	advancedOptionFour.removeEventListener('click', advanced_correct);
 	if (currentAdvanced === 0) {
-	  advancedOptionTwo.addEventListener('click', advanced_question);
+		advancedOptionTwo.removeEventListener('click', incorrect);
+		advancedOptionTwo.addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 1) {
-	  advancedOptionFour.addEventListener('click', advanced_question);
+		advancedOptionFour.removeEventListener('click', incorrect);
+		advancedOptionFour.addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 2) {
-	  advancedOptionTwo.addEventListener('click', advanced_question);
+		advancedOptionTwo.removeEventListener('click', incorrect);
+		advancedOptionTwo.addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 3) {
-	  advancedOptionOne.addEventListener('click', advanced_question);
+		advancedOptionOne.removeEventListener('click', incorrect);
+		advancedOptionOne.addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 4) {
-	  advancedOptionFour.addEventListener('click', home);
+		advancedOptionFour.removeEventListener('click', incorrect);
+		advancedOptionFour.addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
 }
@@ -142,4 +169,19 @@ function home() {
 
 function incorrect() {
 	answer.innerHTML = 'INCORRECT';
+}
+
+function basic_correct() {
+	answer.innerHTML = 'CORRECT';
+	basic_question();
+}
+
+function intermediate_correct() {
+	answer.innerHTML = 'CORRECT';
+	intermediate_question();
+}
+
+function advanced_correct() {
+	answer.innerHTML = 'CORRECT';
+	advanced_question();
 }

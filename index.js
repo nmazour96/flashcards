@@ -5,6 +5,14 @@ var question = document.getElementById('question');
 
 var answer = document.getElementById('answer');
 
+var correct = document.getElementById('correct');
+
+var score = 0;
+
+var totalQuestions = document.getElementById('questionNumber');
+
+var total = 0;
+
 var basicOptions = document.getElementById('basicOptions');
 basicOptions.style.display = 'none';
 var basicOptionOne = document.getElementById('basicOptionOne');
@@ -77,6 +85,7 @@ function basic_question() {
 		basicOptionThree.addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
+    total_score();
 }
 
 var currentIntermediate = 0;
@@ -115,6 +124,7 @@ function intermediate_question() {
 		intermediateOptionFour.addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
+    total_score();
 }
 
 var currentAdvanced = 0;
@@ -153,6 +163,7 @@ function advanced_question() {
 		advancedOptionFour.addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
+	total_score();
 }
 
 function home() {
@@ -184,4 +195,18 @@ function intermediate_correct() {
 function advanced_correct() {
 	answer.innerHTML = 'CORRECT';
 	advanced_question();
+}
+
+function total_score() {
+  if (incorrect()) {
+    score = score - 1;
+  } else {
+    score = score + 1;
+  }
+  correct.innerHTML = score;
+  if (incorrect()) {
+  	} else {
+  		total = total + 1;
+  	}
+  	totalQuestions.innerHTML = total;
 }

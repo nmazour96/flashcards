@@ -6,7 +6,6 @@ var question = document.getElementById('question');
 var answer = document.getElementById('answer');
 answer.style.fontSize = '35px';
 answer.style.color = '#000';
-answer.style.backgroundColor = '#FFF';
 
 var correct = document.getElementById('correct');
 

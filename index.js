@@ -26,9 +26,6 @@ advancedOptions.style.display = 'none';
 
 var answer = document.getElementById('answer');
 
-var options = document.getElementById('options');
-options.style.display = 'none';
-
 var sectionTitles = document.getElementById('sectionTitles');
 sectionTitles.style.fontSize = '50px';
 

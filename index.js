@@ -107,7 +107,7 @@ function advanced_question() {
 function home() {
 	options.style.display = 'none';
 	question.style.display = 'none';
-	incorrect.style.display = 'none';
+	answer.innerHTML = '';
 	sectionTitles.style.display = 'block';
 	currentBasic = 0;
 	currentIntermediate = 0;
@@ -116,23 +116,19 @@ function home() {
 
 function incorrect() {
 	answer.innerHTML = 'INCORRECT';
-	answer.style.display = 'block';
 }
 
 function correct_basic() {
-	answer.style.display = 'block';
 	answer.innerHTML = 'CORRECT';
 	basic_question();
 }
 
 function correct_intermediate() {
-	answer.style.display = 'block';
 	answer.innerHTML = 'CORRECT';
 	intermediate_question();
 }
 
 function correct_advanced() {
-	answer.style.display = 'block';
 	answer.innerHTML = 'CORRECT';
 	advanced_question();
 }

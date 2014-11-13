@@ -7,7 +7,7 @@ var optionTwo = document.getElementById('optionTwo');
 var optionThree = document.getElementById('optionThree');
 var optionFour = document.getElementById('optionFour');
 
-var answer = documentGetElementById('incorrect');
+var answer = document.getElementById('answer');
 answer.style.display = 'none';
 
 var options = document.getElementById('options');

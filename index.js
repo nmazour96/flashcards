@@ -14,9 +14,9 @@ var currentIntermediate = 0;
 var currentAdvanced = 0;
 
 var message = document.getElementById('message');
+message.style.display = 'none';
 message.style.fontSize = '100px';
 message.style.color = '#F00';
-message.style.display = 'none';
 
 var options = document.getElementById('options');
 options.style.display = 'none';

@@ -17,13 +17,15 @@ var message = document.getElementById('message');
 message.style.display = 'none';
 message.style.fontSize = '100px';
 message.style.color = '#F00';
-message.addEventListener('click', reset);
 
 var options = document.getElementById('options');
 options.style.display = 'none';
 
 var congrats = document.getElementById('congrats');
 congrats.style.display = 'none';
+
+var instructions = document.getElementById('instructions');
+instructions.style.display = 'none';
 
 var answer = document.getElementById('answer');
 answer.style.fontSize = '35px';
@@ -222,27 +224,11 @@ function congratulations() {
 	if (score === 15) {
 		congrats.style.display = 'block';
 		message.style.display = 'block';
+		instructions.display = 'block';
 		scoreCalculator.style.display = 'none';
 		basicQuestionSection.style.display = 'none';
 		intermediateQuestionSection.style.display = 'none';
 		advancedQuestionSection.style.display = 'none';
 		document.getElementById('title').style.display = 'none';
 	}
-}
-
-function reset() {
-	currentBasic = 0;
-	currentIntermediate = 0;
-	currentAdvanced = 0;
-	score = 0;
-	congrats.style.display = 'none';
-	message.style.display = 'none';
-	scoreCalculator.style.display = 'block';
-	basicQuestionSection.style.display = 'block';
-	basicQuestionSection.addEventListener('click', basic_question);
-	intermediateQuestionSection.style.display = 'block';
-	intermediateQuestionSection.addEventListener('click', intermediate_question);
-	advancedQuestionSection.style.display = 'block';
-	advancedQuestionSection.addEventListener('click', advanced_question);
-	document.getElementById('title').style.display = 'block';
 }

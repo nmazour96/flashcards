@@ -1,5 +1,6 @@
 p {
 	text-align: center;
+	color: #FFF;
 }
 
 button {
@@ -8,14 +9,12 @@ button {
 
 div {
 	text-align: center;
+	color: #FFF;
 }
 
 .question {
 	font-size: 75px;
-}
-
-.line-separator {
-    height: 30px;
+	color: #FFF;
 }
 
 img {
@@ -26,4 +25,9 @@ img {
 h1 {
 	font-size: 75px;
 	text-align: center;
+	color: #FFF
+}
+
+html {
+	background-color: #000;
 }

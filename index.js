@@ -224,7 +224,7 @@ function congratulations() {
 	if (score === 15) {
 		congrats.style.display = 'block';
 		message.style.display = 'block';
-		instructions.display = 'block';
+		instructions.style.display = 'block';
 		scoreCalculator.style.display = 'none';
 		basicQuestionSection.style.display = 'none';
 		intermediateQuestionSection.style.display = 'none';

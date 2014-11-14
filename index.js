@@ -120,9 +120,9 @@ function advanced_question() {
 }
 
 function home() {
-	basicOptions.style.display = 'none';
-	intermediateOptions.style.display = 'none';
-	advancedOptions.style.display = 'none';
+	options.style.display = 'none';
+	options.style.display = 'none';
+	options.style.display = 'none';
 	question.style.display = 'none';
 	answer.innerHTML = '';
 	sectionTitles.style.display = 'block';

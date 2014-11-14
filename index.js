@@ -2,20 +2,27 @@
 /*jslint browser: true*/ // This line tells jsLint that the code will run in a browser.
 
 var question = document.getElementById('question');
+var correct = document.getElementById('correct');
+var optionOne = document.getElementById('optionOne');
+var optionTwo = document.getElementById('optionTwo');
+var optionThree = document.getElementById('optionThree');
+var optionFour = document.getElementById('optionFour');
+
+var score = 0;
+var currentBasic = 0;
+var currentIntermediate = 0;
+var currentAdvanced = 0;
+
+var options = document.getElementById('options');
+options.style.display = 'none';
 
 var answer = document.getElementById('answer');
 answer.style.fontSize = '35px';
 answer.style.color = '#000';
 
-var score = 0;
-var correct = document.getElementById('correct');
-
-var options = document.getElementById('options');
-options.style.display = 'none';
-var optionOne = document.getElementById('optionOne');
-var optionTwo = document.getElementById('optionTwo');
-var optionThree = document.getElementById('optionThree');
-var optionFour = document.getElementById('optionFour');
+var scoreCalculator = document.getElementById('scoreCalculator');
+scoreCalculator.style.fontSize = '35px';
+scoreCalculator.style.color = '#0C8';
 
 var sectionTitles = document.getElementById('sectionTitles');
 sectionTitles.style.fontSize = '50px';
@@ -31,8 +38,6 @@ intermediateQuestionSection.addEventListener('click', intermediate_question);
 var advancedQuestionSection = document.getElementById('advancedQuestionSection');
 advancedQuestionSection.style.color = '#00F';
 advancedQuestionSection.addEventListener('click', advanced_question);
-
-var currentBasic = 0;
 
 function basic_question() {
 	options.style.display = 'block';
@@ -73,8 +78,6 @@ function basic_question() {
     currentBasic = currentBasic + 1;
 }
 
-var currentIntermediate = 0;
-
 function intermediate_question() {
 	options.style.display = 'block';
 	question.style.display = 'block';
@@ -112,8 +115,6 @@ function intermediate_question() {
 	}
     currentIntermediate = currentIntermediate + 1;
 }
-
-var currentAdvanced = 0;
 
 function advanced_question() {
 	options.style.display = 'block';

@@ -21,7 +21,7 @@ congrats.style.display = 'none';
 
 var answer = document.getElementById('answer');
 answer.style.fontSize = '35px';
-answer.style.color = '#000';
+answer.style.color = '#0C8';
 
 var scoreCalculator = document.getElementById('scoreCalculator');
 scoreCalculator.style.fontSize = '35px';

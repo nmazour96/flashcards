@@ -167,6 +167,7 @@ function home() {
 function incorrect () {
 	answer.innerHTML = 'INCORRECT';
 	score = score - 1;
+	correct.innerHTML = score;
 }
 
 function basic_correct() {

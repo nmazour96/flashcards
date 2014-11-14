@@ -17,6 +17,7 @@ var message = document.getElementById('message');
 message.style.display = 'none';
 message.style.fontSize = '100px';
 message.style.color = '#F00';
+message.addEventListener('click', reset);
 
 var options = document.getElementById('options');
 options.style.display = 'none';
@@ -170,9 +171,6 @@ function home() {
 	question.style.display = 'none';
 	answer.innerHTML = '';
 	sectionTitles.style.display = 'block';
-	currentBasic = 0;
-	currentIntermediate = 0;
-	currentAdvanced = 0;
 	score = score + 1;
 	correct.innerHTML = score;
 	congratulations();
@@ -230,4 +228,21 @@ function congratulations() {
 		advancedQuestionSection.style.display = 'none';
 		document.getElementById('title').style.display = 'none';
 	}
+}
+
+function reset() {
+	currentBasic = 0;
+	currentIntermediate = 0;
+	currentAdvanced = 0;
+	score = 0;
+	congrats.style.display = 'none';
+	message.style.display = 'none';
+	scoreCalculator.style.display = 'block';
+	basicQuestionSection.style.display = 'block';
+	basicQuestionSection.addEventListener('click', basic_question);
+	intermediateQuestionSection.style.display = 'block';
+	intermediateQuestionSection.addEventListener('click', intermediate_question);
+	advancedQuestionSection.style.display = 'block';
+	advancedQuestionSection.addEventListener('click', advanced_question);
+	document.getElementById('title').style.display = 'block';
 }

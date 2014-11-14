@@ -74,6 +74,7 @@ function basic_question() {
 		basicOptionThree.addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
+    basic_score();
 }
 
 var currentIntermediate = 0;
@@ -164,4 +165,11 @@ function intermediate_correct() {
 function advanced_correct() {
 	answer.innerHTML = 'CORRECT';
 	advanced_question();
+}
+
+function basic_score() {
+	if (basic_question()) {
+		score = score + 1;
+	}
+	correct.innerHTML = score;
 }

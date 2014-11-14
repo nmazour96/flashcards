@@ -9,7 +9,6 @@ answer.style.color = '#000';
 
 var score = 0;
 var correct = document.getElementById('correct');
-correct.innerHTML = score;
 
 var options = document.getElementById('options');
 options.style.display = 'none';
@@ -141,16 +140,19 @@ function basic_correct() {
 	answer.innerHTML = 'CORRECT';
 	basic_question();
 	score = score + 1;
+	correct.innerHTML = score;
 }
 
 function intermediate_correct() {
 	answer.innerHTML = 'CORRECT';
 	intermediate_question();
 	score = score + 1;
+	correct.innerHTML = score;
 }
 
 function advanced_correct() {
 	answer.innerHTML = 'CORRECT';
 	advanced_question();
 	score = score + 1;
+	correct.innerHTML = score;
 }

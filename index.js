@@ -13,6 +13,11 @@ var currentBasic = 0;
 var currentIntermediate = 0;
 var currentAdvanced = 0;
 
+var message = document.getElementById('message');
+message.style.fontSize = '100px';
+message.style.fontColor = '#F00';
+message.style.display = 'none';
+
 var options = document.getElementById('options');
 options.style.display = 'none';
 
@@ -218,6 +223,7 @@ function disable_advanced() {
 function congratulations() {
 	if (score === 15) {
 		congrats.style.display = 'block';
+		message.style.display = 'block';
 		scoreCalculator.style.display = 'none';
 		basicQuestionSection.style.display = 'none';
 		intermediateQuestionSection.style.display = 'none';

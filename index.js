@@ -218,7 +218,7 @@ function disable_advanced() {
 function congratulations() {
 	if (score === 15) {
 		congrats.style.display = 'block';
-		score.style.display = 'none';
+		scoreCalculator.style.display = 'none';
 		basicQuestionSection.style.display = 'none';
 		intermediateQuestionSection.style.display = 'none';
 		advancedQuestionSection.style.display = 'none';

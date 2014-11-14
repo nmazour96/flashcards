@@ -168,7 +168,7 @@ function advanced_correct() {
 }
 
 function basic_score() {
-	if (basic_question()) {
+	while (basic_question()) {
 		score = score + 1;
 	}
 	correct.innerHTML = score;

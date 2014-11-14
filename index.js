@@ -198,12 +198,15 @@ function advanced_correct() {
 
 function disable_basic() {
 	basicQuestionSection.removeEventListener('click', basic_question);
+	basicQuestionSection.style.opacity = '.3';
 }
 
 function disable_intermediate() {
 	intermediateQuestionSection.removeEventListener('click', intermediate_question);
+	intermediateQuestionSection.style.opacity = '.3';
 }
 
 function disable_advanced() {
 	advancedQuestionSection.removeEventListener('click', advanced_question);
+	advancedQuestionSection.style.opacity = '.3';
 }

@@ -16,6 +16,9 @@ var currentAdvanced = 0;
 var options = document.getElementById('options');
 options.style.display = 'none';
 
+var congrats = document.getElementById('congrats');
+congrats.style.display = 'none';
+
 var answer = document.getElementById('answer');
 answer.style.fontSize = '35px';
 answer.style.color = '#000';
@@ -167,6 +170,7 @@ function home() {
 	currentAdvanced = 0;
 	score = score + 1;
 	correct.innerHTML = score;
+	congratulations();
 }
 
 function incorrect () {
@@ -209,4 +213,15 @@ function disable_intermediate() {
 function disable_advanced() {
 	advancedQuestionSection.removeEventListener('click', advanced_question);
 	advancedQuestionSection.style.opacity = '.3';
+}
+
+function congratulations() {
+	if (score === 15) {
+		congrats.style.display = 'block';
+		score.style.display = 'none';
+		basicQuestionSection.style.display = 'none';
+		intermediateQuestionSection.style.display = 'none';
+		advancedQuestionSection.style.display = 'none';
+		document.getElementById('title').style.display = 'none';
+	}
 }

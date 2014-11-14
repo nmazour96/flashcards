@@ -19,7 +19,8 @@ div {
 }
 
 img {
-	margin-left: 37vw;
+	height: 100vw;
+	width: 100vw;
 }
 
 h1 {

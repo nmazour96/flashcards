@@ -76,6 +76,7 @@ function basic_question() {
 		optionThree.addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
+    disable_basic();
 }
 
 function intermediate_question() {
@@ -114,6 +115,7 @@ function intermediate_question() {
 		optionFour.addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
+    disable_intermediate();
 }
 
 function advanced_question() {
@@ -152,6 +154,7 @@ function advanced_question() {
 		optionFour.addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
+	disable_advanced();
 }
 
 function home() {
@@ -163,6 +166,7 @@ function home() {
 	currentIntermediate = 0;
 	currentAdvanced = 0;
 	score = score + 1;
+	correct.innerHTML = score;
 }
 
 function incorrect () {
@@ -190,4 +194,16 @@ function advanced_correct() {
 	advanced_question();
 	score = score + 1;
 	correct.innerHTML = score;
+}
+
+function disable_basic() {
+	basicQuestionSection.removeEventListener('click', basic_question);
+}
+
+function disable_intermediate() {
+	intermediateQuestionSection.removeEventListener('click', intermediate_question);
+}
+
+function disable_advanced() {
+	advancedQuestionSection.removeEventListener('click', advanced_question);
 }

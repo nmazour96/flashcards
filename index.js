@@ -3,7 +3,7 @@
 
 var question = document.getElementById('question');
 var correct = document.getElementById('correct');
-var choices = [document.getElementById('optionOne'), document.getElementById('optionTwo'),document.getElementById('optionThree'), document.getElementById('optionFour')];
+var choices = [document.getElementById('options')];
 
 var score = 0;
 var currentBasic = 0;

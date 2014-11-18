@@ -81,6 +81,7 @@ function basic_question() {
 	}
     currentBasic = currentBasic + 1;
     disable_basic();
+    option = 0;
 }
 
 function intermediate_question() {
@@ -116,6 +117,7 @@ function intermediate_question() {
 	}
     currentIntermediate = currentIntermediate + 1;
     disable_intermediate();
+    option = 0;
 }
 
 function advanced_question() {
@@ -151,6 +153,7 @@ function advanced_question() {
 	}
 	currentAdvanced = currentAdvanced + 1;
 	disable_advanced();
+	option = 0;
 }
 
 function home() {

@@ -65,6 +65,7 @@ function basic_question() {
 		choices[option].removeEventListener('click', basic_correct);
 		choices[option].removeEventListener('click', home);
 		choices[option].addEventListener('click',incorrect);
+		option = option + 1;
 	}
 	if (currentBasic === 0) {
 		optionTwo.removeEventListener('click', incorrect);
@@ -171,6 +172,7 @@ function home() {
 	sectionTitles.style.display = 'block';
 	score = score + 1;
 	correct.innerHTML = score;
+	option = 0;
 	congratulations();
 }
 

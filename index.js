@@ -3,11 +3,7 @@
 
 var question = document.getElementById('question');
 var correct = document.getElementById('correct');
-var optionOne = document.getElementById('optionOne');
-var optionTwo = document.getElementById('optionTwo');
-var optionThree = document.getElementById('optionThree');
-var optionFour = document.getElementById('optionFour');
-var choices = [optionOne, optionTwo, optionThree, optionFour];
+var choices = [document.getElementById('optionOne'), document.getElementById('optionTwo'),ocument.getElementById('optionThree'), document.getElementById('optionFour')];
 
 var score = 0;
 var currentBasic = 0;
@@ -68,20 +64,20 @@ function basic_question() {
 		option = option + 1;
 	}
 	if (currentBasic === 0) {
-		optionTwo.removeEventListener('click', incorrect);
-		optionTwo.addEventListener('click', basic_correct);
+		choices[1].removeEventListener('click', incorrect);
+		choices[1].addEventListener('click', basic_correct);
 	} else if (currentBasic === 1) {
-		optionThree.removeEventListener('click', incorrect);
-		optionThree.addEventListener('click', basic_correct);
+		choices[2].removeEventListener('click', incorrect);
+		choices[2].addEventListener('click', basic_correct);
 	} else if (currentBasic === 2) {
-		optionFour.removeEventListener('click', incorrect);
-		optionFour.addEventListener('click', basic_correct);
+		choices[3].removeEventListener('click', incorrect);
+		choices[3].addEventListener('click', basic_correct);
 	} else if (currentBasic === 3) {
-		optionOne.removeEventListener('click', incorrect);
-		optionOne.addEventListener('click', basic_correct);
+		choices[0].removeEventListener('click', incorrect);
+		choices[0].addEventListener('click', basic_correct);
 	} else if (currentBasic === 4) {
-		optionThree.removeEventListener('click', incorrect);
-		optionThree.addEventListener('click', home);
+		choices[2].removeEventListener('click', incorrect);
+		choices[2].addEventListener('click', home);
 	}
     currentBasic = currentBasic + 1;
     disable_basic();
@@ -92,35 +88,31 @@ function intermediate_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
   	question.innerHTML = intermediateQuestions[currentIntermediate].question;
-  	optionOne.innerHTML = intermediateQuestions[currentIntermediate].options[0];
-	optionTwo.innerHTML = intermediateQuestions[currentIntermediate].options[1];
-	optionThree.innerHTML = intermediateQuestions[currentIntermediate].options[2];
-	optionFour.innerHTML = intermediateQuestions[currentIntermediate].options[3];
-	optionOne.removeEventListener('click', intermediate_correct);
-	optionOne.addEventListener('click', incorrect);
-	optionTwo.removeEventListener('click', intermediate_correct);
-	optionTwo.addEventListener('click', incorrect);
-	optionThree.removeEventListener('click', intermediate_correct);
-	optionThree.removeEventListener('click', home);
-	optionThree.addEventListener('click', incorrect);
-	optionFour.removeEventListener('click', intermediate_correct);
-	optionFour.removeEventListener('click', home);
-	optionFour.addEventListener('click', incorrect);
+  	choices[0].innerHTML = intermediateQuestions[currentIntermediate].options[0];
+	choices[1].innerHTML = intermediateQuestions[currentIntermediate].options[1];
+	choices[2].innerHTML = intermediateQuestions[currentIntermediate].options[2];
+	choices[3].innerHTML = intermediateQuestions[currentIntermediate].options[3];
+	while (option < 4) {
+		choices[option].removeEventListener('click', intermediate_correct);
+		choices[option].removeEventListener('click', home);
+		choices[option].addEventListener('click',incorrect);
+		option = option + 1;
+	}
 	if (currentIntermediate === 0) {
-		optionTwo.removeEventListener('click', incorrect);
-		optionTwo.addEventListener('click', intermediate_correct);
+		choices[1].removeEventListener('click', incorrect);
+		choices[1].addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 1) {
-		optionOne.removeEventListener('click', incorrect);
-		optionOne.addEventListener('click', intermediate_correct);
+		choices[0].removeEventListener('click', incorrect);
+		choices[0].addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 2) {
-		optionThree.removeEventListener('click', incorrect);
-		optionThree.addEventListener('click', intermediate_correct);
+		choices[2].removeEventListener('click', incorrect);
+		choices[2].addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 3) {
-		optionTwo.removeEventListener('click', incorrect);
-		optionTwo.addEventListener('click', intermediate_correct);
+		choices[1].removeEventListener('click', incorrect);
+		choices[1].addEventListener('click', intermediate_correct);
 	} else if (currentIntermediate === 4) {
-		optionFour.removeEventListener('click', incorrect);
-		optionFour.addEventListener('click', home);
+		choices[3].removeEventListener('click', incorrect);
+		choices[3].addEventListener('click', home);
 	}
     currentIntermediate = currentIntermediate + 1;
     disable_intermediate();
@@ -131,35 +123,31 @@ function advanced_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
 	question.innerHTML = advancedQuestions[currentAdvanced].question;
-	optionOne.innerHTML = advancedQuestions[currentAdvanced].options[0];
-	optionTwo.innerHTML = advancedQuestions[currentAdvanced].options[1];
-	optionThree.innerHTML = advancedQuestions[currentAdvanced].options[2];
-	optionFour.innerHTML = advancedQuestions[currentAdvanced].options[3];
-	optionOne.removeEventListener('click', advanced_correct);
-	optionOne.addEventListener('click', incorrect);
-	optionTwo.removeEventListener('click', advanced_correct);
-	optionTwo.addEventListener('click', incorrect);
-	optionThree.removeEventListener('click', advanced_correct);
-	optionThree.removeEventListener('click', home);
-	optionThree.addEventListener('click', incorrect);
-	optionFour.removeEventListener('click', advanced_correct);
-	optionFour.removeEventListener('click', home);
-	optionFour.addEventListener('click', incorrect);
+	choices[0].innerHTML = advancedQuestions[currentAdvanced].options[0];
+	choices[1].innerHTML = advancedQuestions[currentAdvanced].options[1];
+	choices[2].innerHTML = advancedQuestions[currentAdvanced].options[2];
+	choices[3].innerHTML = advancedQuestions[currentAdvanced].options[3];
+	while (option < 4) {
+		choices[option].removeEventListener('click', advanced_correct);
+		choices[option].removeEventListener('click', home);
+		choices[option].addEventListener('click',incorrect);
+		option = option + 1;
+	}
 	if (currentAdvanced === 0) {
-		optionTwo.removeEventListener('click', incorrect);
-		optionTwo.addEventListener('click', advanced_correct);
+		choices[1].removeEventListener('click', incorrect);
+		choices[1].addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 1) {
-		optionFour.removeEventListener('click', incorrect);
-		optionFour.addEventListener('click', advanced_correct);
+		choices[3].removeEventListener('click', incorrect);
+		choices[3].addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 2) {
-		optionTwo.removeEventListener('click', incorrect);
-		optionTwo.addEventListener('click', advanced_correct);
+		choices[1].removeEventListener('click', incorrect);
+		choices[1].addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 3) {
-		optionOne.removeEventListener('click', incorrect);
-		optionOne.addEventListener('click', advanced_correct);
+		choices[0].removeEventListener('click', incorrect);
+		choices[0].addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 4) {
-		optionFour.removeEventListener('click', incorrect);
-		optionFour.addEventListener('click', home);
+		choices[3].removeEventListener('click', incorrect);
+		choices[3].addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
 	disable_advanced();

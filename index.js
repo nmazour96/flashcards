@@ -8,12 +8,12 @@ var optionTwo = document.getElementById('optionTwo');
 var optionThree = document.getElementById('optionThree');
 var optionFour = document.getElementById('optionFour');
 var choices = [optionOne, optionTwo, optionThree, optionFour];
-var option = 1;
 
 var score = 0;
 var currentBasic = 0;
 var currentIntermediate = 0;
 var currentAdvanced = 0;
+var option = 0;
 
 var message = document.getElementById('message');
 message.style.display = 'none';
@@ -57,11 +57,11 @@ function basic_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
   	question.innerHTML = basicQuestions[currentBasic].question;
-  	choices[1].innerHTML = basicQuestions[currentBasic].options[0];
-	choices[2].innerHTML = basicQuestions[currentBasic].options[1];
-	choices[3].innerHTML = basicQuestions[currentBasic].options[2];
-	choices[4].innerHTML = basicQuestions[currentBasic].options[3];
-	while (option < 5) {
+  	choices[0].innerHTML = basicQuestions[currentBasic].options[0];
+	choices[1].innerHTML = basicQuestions[currentBasic].options[1];
+	choices[2].innerHTML = basicQuestions[currentBasic].options[2];
+	choices[3].innerHTML = basicQuestions[currentBasic].options[3];
+	while (option < 4) {
 		choices[option].removeEventListener('click', basic_correct);
 		choices[option].removeEventListener('click', home);
 		choices[option].addEventListener('click',incorrect);

@@ -25,6 +25,9 @@ congrats.style.display = 'none';
 var instructions = document.getElementById('instructions');
 instructions.style.display = 'none';
 
+var lastQuestionOptions = document.getElementById('lastQuestionOptions');
+lastQuestionOptions.style.display = 'none';
+
 var answer = document.getElementById('answer');
 answer.style.fontSize = '35px';
 answer.style.color = '#0C8';
@@ -53,11 +56,8 @@ function basic_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
   	question.innerHTML = basicQuestions[currentBasic].question;
-  	choices[0].innerHTML = basicQuestions[currentBasic].options[0];
-	choices[1].innerHTML = basicQuestions[currentBasic].options[1];
-	choices[2].innerHTML = basicQuestions[currentBasic].options[2];
-	choices[3].innerHTML = basicQuestions[currentBasic].options[3];
 	while (option < 4) {
+		choices[option].innerHTML = basicQuestions[currentBasic].options[option];
 		choices[option].removeEventListener('click', basic_correct);
 		choices[option].removeEventListener('click', home);
 		choices[option].addEventListener('click',incorrect);
@@ -89,11 +89,8 @@ function intermediate_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
   	question.innerHTML = intermediateQuestions[currentIntermediate].question;
-  	choices[0].innerHTML = intermediateQuestions[currentIntermediate].options[0];
-	choices[1].innerHTML = intermediateQuestions[currentIntermediate].options[1];
-	choices[2].innerHTML = intermediateQuestions[currentIntermediate].options[2];
-	choices[3].innerHTML = intermediateQuestions[currentIntermediate].options[3];
 	while (option < 4) {
+		choices[option].innerHTML = intermediateQuestions[currentAdvanced].options[option];
 		choices[option].removeEventListener('click', intermediate_correct);
 		choices[option].removeEventListener('click', home);
 		choices[option].addEventListener('click',incorrect);
@@ -125,11 +122,8 @@ function advanced_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
 	question.innerHTML = advancedQuestions[currentAdvanced].question;
-	choices[0].innerHTML = advancedQuestions[currentAdvanced].options[0];
-	choices[1].innerHTML = advancedQuestions[currentAdvanced].options[1];
-	choices[2].innerHTML = advancedQuestions[currentAdvanced].options[2];
-	choices[3].innerHTML = advancedQuestions[currentAdvanced].options[3];
 	while (option < 4) {
+		choices[option].innerHTML = advancedQuestions[currentAdvanced].options[option];
 		choices[option].removeEventListener('click', advanced_correct);
 		choices[option].removeEventListener('click', home);
 		choices[option].addEventListener('click',incorrect);
@@ -148,8 +142,13 @@ function advanced_question() {
 		choices[0].removeEventListener('click', incorrect);
 		choices[0].addEventListener('click', advanced_correct);
 	} else if (currentAdvanced === 4) {
-		choices[3].removeEventListener('click', incorrect);
-		choices[3].addEventListener('click', home);
+		options.style.display = 'none';
+		lastQuestionOptions.style.display = 'block';
+		while (option < 22) {
+			choices[option].innerHTML = advancedQuestions[currentAdvanced].options[option];
+			option = option + 1;
+		}
+		choices[19].addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
 	disable_advanced();
@@ -158,6 +157,7 @@ function advanced_question() {
 
 function home() {
 	options.style.display = 'none';
+	lastQuestionOptions.display = 'none';
 	question.style.display = 'none';
 	answer.innerHTML = '';
 	sectionTitles.style.display = 'block';

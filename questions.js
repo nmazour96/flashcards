@@ -75,9 +75,9 @@ var advancedQuestions = [
 	options: ['no solution', '-2/5', '5', '2'],
 	answer: ['no solution'],
     },
-    {
+    {	
 	question: 'log 90',
-	options: ['no solution', '3.28', '4.53', '1.95'],
+	options: ['no solution', 0.1, 0.25, 0.3, 0.45, 0.5, 0.6, 0.7, 0.85, 0.9, 1.0, 1.1, 1.25, 1.3, 1.4, 1.5, 1.65, 1.7, 1.8, 1.95, 2.0, 1.15],
 	answer: ['1.95'],
     },
 ];

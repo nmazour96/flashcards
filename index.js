@@ -144,6 +144,7 @@ function advanced_question() {
 	} else if (currentAdvanced === 4) {
 		options.style.display = 'none';
 		lastQuestionOptions.style.display = 'block';
+		option = 0;
 		while (option < 22) {
 			choices[option].innerHTML = advancedQuestions[currentAdvanced].options[option];
 			option = option + 1;

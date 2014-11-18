@@ -7,6 +7,8 @@ var optionOne = document.getElementById('optionOne');
 var optionTwo = document.getElementById('optionTwo');
 var optionThree = document.getElementById('optionThree');
 var optionFour = document.getElementById('optionFour');
+var options = [optionOne, optionTwo, optionThree, optionFour];
+var option = 1;
 
 var score = 0;
 var currentBasic = 0;
@@ -55,21 +57,15 @@ function basic_question() {
 	question.style.display = 'block';
 	sectionTitles.style.display = 'none';
   	question.innerHTML = basicQuestions[currentBasic].question;
-  	optionOne.innerHTML = basicQuestions[currentBasic].options[0];
-	optionTwo.innerHTML = basicQuestions[currentBasic].options[1];
-	optionThree.innerHTML = basicQuestions[currentBasic].options[2];
-	optionFour.innerHTML = basicQuestions[currentBasic].options[3];
-	optionOne.removeEventListener('click', basic_correct);
-	optionOne.addEventListener('click', incorrect);
-	optionTwo.removeEventListener('click', basic_correct);
-	optionTwo.addEventListener('click', incorrect);
-	optionThree.removeEventListener('click', basic_correct);
-	optionThree.removeEventListener('click', home);
-	optionThree.addEventListener('click', incorrect);
-	optionThree.removeEventListener('click', home);
-	optionFour.removeEventListener('click', basic_correct);
-	optionFour.removeEventListener('click', home);
-	optionFour.addEventListener('click', incorrect);
+  	options[1].innerHTML = basicQuestions[currentBasic].options[0];
+	option[2].innerHTML = basicQuestions[currentBasic].options[1];
+	options[3].innerHTML = basicQuestions[currentBasic].options[2];
+	options[4].innerHTML = basicQuestions[currentBasic].options[3];
+	while (option < 5) {
+		options[option].removeEventListener('click', basic_correct);
+		options[option].removeEventListener('click', home);
+		options[option].addEventListener('click',incorrect);
+	}
 	if (currentBasic === 0) {
 		optionTwo.removeEventListener('click', incorrect);
 		optionTwo.addEventListener('click', basic_correct);

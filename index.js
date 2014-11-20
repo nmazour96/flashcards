@@ -157,7 +157,7 @@ function advanced_question() {
 		option = 0;
 		while (option < 22) {
 			lastChoices[option].innerHTML = advancedQuestions[currentAdvanced].options[option];
-			lastChoices[option].addEvenListener('click', incorrect);
+			lastChoices[option].addEventListener('click', incorrect);
 			option = option + 1;
 		}
 		lastChoices[19].removeEventListener('click', incorrect);

@@ -25,6 +25,7 @@ congrats.style.display = 'none';
 
 var reset = document.getElementById('reset');
 reset.style.display = 'none';
+reset.PluginArray.refresh;
 reset.innerHTML = 'RESET';
 
 var lastQuestionOptions = document.getElementById('lastQuestionOptions');

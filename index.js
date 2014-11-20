@@ -24,6 +24,7 @@ var congrats = document.getElementById('congrats');
 congrats.style.display = 'none';
 
 var reset = document.getElementById('reset');
+reset.addEventListener('click', resetFunction);
 
 var lastQuestionOptions = document.getElementById('lastQuestionOptions');
 lastQuestionOptions.style.display = 'none';
@@ -231,4 +232,8 @@ function congratulations() {
 		advancedQuestionSection.style.display = 'none';
 		document.getElementById('title').style.display = 'none';
 	}
+}
+
+function resetFunction() {
+	document.location = 'http://nmazour96.github.io/flashcards/';
 }

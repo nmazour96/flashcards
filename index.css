@@ -31,3 +31,7 @@ h1 {
 html {
 	background-color: #000;
 }
+
+.centered {
+	text-align: center;
+}

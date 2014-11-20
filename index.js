@@ -97,7 +97,7 @@ function intermediate_question() {
   	choices[1].innerHTML = intermediateQuestions[currentIntermediate].options[1];
   	choices[2].innerHTML = intermediateQuestions[currentIntermediate].options[2];
   	choices[3].innerHTML = intermediateQuestions[currentIntermediate].options[3];
-	while (option < 4) {}
+	while (option < 4) {
 		choices[option].removeEventListener('click', intermediate_correct);
 		choices[option].removeEventListener('click', home);
 		choices[option].addEventListener('click',incorrect);

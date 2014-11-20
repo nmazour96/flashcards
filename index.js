@@ -157,8 +157,10 @@ function advanced_question() {
 		option = 0;
 		while (option < 22) {
 			lastChoices[option].innerHTML = advancedQuestions[currentAdvanced].options[option];
+			lastChoices[option].addEvenListener('click', incorrect);
 			option = option + 1;
 		}
+		lastChoices[19].removeEventListener('click', incorrect);
 		lastChoices[19].addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
@@ -168,7 +170,7 @@ function advanced_question() {
 
 function home() {
 	options.style.display = 'none';
-	lastQuestionOptions.display = 'none';
+	lastQuestionOptions.style.display = 'none';
 	question.style.display = 'none';
 	answer.innerHTML = '';
 	sectionTitles.style.display = 'block';

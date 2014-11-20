@@ -159,7 +159,7 @@ function advanced_question() {
 			lastChoices[option].innerHTML = advancedQuestions[currentAdvanced].options[option];
 			option = option + 1;
 		}
-		choices[19].addEventListener('click', home);
+		lastChoices[19].addEventListener('click', home);
 	}
 	currentAdvanced = currentAdvanced + 1;
 	disable_advanced();

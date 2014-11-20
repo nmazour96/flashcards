@@ -23,8 +23,9 @@ options.style.display = 'none';
 var congrats = document.getElementById('congrats');
 congrats.style.display = 'none';
 
-var instructions = document.getElementById('instructions');
-instructions.style.display = 'none';
+var reset = document.getElementById('reset');
+reset.style.display = 'none';
+reset.innerHTML = 'RESET';
 
 var lastQuestionOptions = document.getElementById('lastQuestionOptions');
 lastQuestionOptions.style.display = 'none';
@@ -226,7 +227,7 @@ function congratulations() {
 	if (score === 15) {
 		congrats.style.display = 'block';
 		message.style.display = 'block';
-		instructions.style.display = 'block';
+		reset.style.display = 'block';
 		scoreCalculator.style.display = 'none';
 		basicQuestionSection.style.display = 'none';
 		intermediateQuestionSection.style.display = 'none';
